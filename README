@@ -1,4 +1,4 @@
-This is your new Play application
+# simple-deploy
 =================================
 
-This file will be packaged with your application, when using `activator dist`.
+简易部署应用，尝试使用play框架，使用Java 8，主要是方便平时开发部署
