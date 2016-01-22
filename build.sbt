@@ -14,6 +14,9 @@ scalaVersion := "2.11.6"
 
 libraryDependencies ++= Seq(
   javaJdbc,
+  jdbc,
+  "mysql" % "mysql-connector-java" % "5.1.34",
+  "com.typesafe.play" %% "play-slick" % "1.1.1",
   cache,
   javaWs
 )

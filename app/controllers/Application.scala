@@ -1,12 +1,17 @@
 package controllers
 
-import play.api._
+import com.google.inject.Inject
+import play.api.db.slick.DatabaseConfigProvider
 import play.api.mvc._
+import slick.driver.MySQLDriver
 
-class Application extends Controller {
+class Application @Inject()(dbConfigProvider: DatabaseConfigProvider) extends Controller {
 
-  def index = Action {
-    Ok(views.html.index("Your new application is ready."))
-  }
+    val dbConfig = dbConfigProvider.get[MySQLDriver]
+
+    def index = Action {
+        var outString = "Number is "
+        Ok(views.html.index(outString))
+    }
 
 }
